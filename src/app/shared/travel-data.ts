@@ -12,6 +12,10 @@ export interface PackageItem {
   rating: number;
   description: string;
   image: string;
+  origin?: string;
+  dhamType?: string;
+  slug?: string;
+  itinerary?: string[];
 }
 
 export interface FleetItem {
@@ -114,123 +118,226 @@ export const services: ServiceItem[] = [
 
 export const packages: PackageItem[] = [
   {
-    title: 'Golden Triangle Escape',
-    destination: 'Delhi • Agra • Jaipur',
-    duration: '6 Days / 5 Nights',
-    price: '₹24,999',
+    title: 'Char Dham Yatra — From Delhi',
+    destination: 'Badrinath • Kedarnath • Gangotri • Yamunotri',
+    duration: '11 Days / 10 Nights',
+    price: '₹34,999',
     rating: 4.9,
-    description: 'A classic heritage journey with palace stays and sunrise visits.',
-    image: 'assets/images/logo.jpeg',
+    description:
+      'Comprehensive Char Dham pilgrimage starting from Delhi with comfortable transfers, temple darshans and guided support.',
+    image: 'assets/images/char-dham-yatra-from-delhi.jpg',
+    origin: 'Delhi',
+    dhamType: '4-dham',
+    slug: 'char-dham-delhi',
   },
   {
-    title: 'Kerala Backwaters Retreat',
-    destination: 'Alleppey • Kochi',
-    duration: '5 Days / 4 Nights',
-    price: '₹19,999',
+    title: 'Char Dham Yatra — From Haridwar',
+    destination: 'Badrinath • Kedarnath • Gangotri • Yamunotri',
+    duration: '10 Days / 9 Nights',
+    price: '₹32,499',
+    rating: 4.9,
+    description:
+      'Char Dham package starting from Haridwar with streamlined transfers to hill shrines and comfortable hill accommodation.',
+    image: 'assets/images/char-dham-yatra-from-haridwar.jpg',
+    origin: 'Haridwar',
+    dhamType: '4-dham',
+    slug: 'char-dham-haridwar',
+  },
+  {
+    title: '3 Dham Yatra — From Delhi',
+    destination: 'Badrinath • Kedarnath • Gangotri',
+    duration: '9 Days / 8 Nights',
+    price: '₹28,999',
     rating: 4.8,
-    description: 'Cruise the canals, unwind in houseboats and explore spice markets.',
-    image:
-      'https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=900&q=80',
+    description:
+      'Three holy shrines pilgrimage starting from Delhi with planned darshans, local transfers and stay arrangements.',
+    image: 'assets/images/3-dham-yatra-from-delhi.jpg',
+    origin: 'Delhi',
+    dhamType: '3-dham',
+    slug: '3-dham-delhi',
   },
   {
-    title: 'Himachal Hills & Valleys',
-    destination: 'Manali • Solang • Kasol',
-    duration: '7 Days / 6 Nights',
-    price: '₹27,999',
-    rating: 4.9,
-    description: 'Snowy peaks, cozy cottages and adventure-filled scenic drives.',
-    image:
-      'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80',
-  },
-  {
-    title: 'Rajasthan Royal Trail',
-    destination: 'Jodhpur • Udaipur',
+    title: '3 Dham Yatra — From Haridwar',
+    destination: 'Badrinath • Kedarnath • Gangotri',
     duration: '8 Days / 7 Nights',
-    price: '₹32,999',
-    rating: 5.0,
-    description: 'Grand forts, desert camps and vibrant folk evenings.',
-    image:
-      'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=900&q=80',
+    price: '₹26,999',
+    rating: 4.8,
+    description:
+      'Convenient 3-dham itinerary launching from Haridwar with experienced drivers and comfortable hotels.',
+    image: 'assets/images/3-dham-yatra-from-haridwar.jpg',
+    origin: 'Haridwar',
+    dhamType: '3-dham',
+    slug: '3-dham-haridwar',
   },
   {
-    title: 'Goa Coastal Bliss',
-    destination: 'North Goa • South Goa',
+    title: '2 Dham Yatra (Badrinath & Kedarnath) — From Delhi',
+    destination: 'Badrinath • Kedarnath',
+    duration: '7 Days / 6 Nights',
+    price: '₹20,999',
+    rating: 4.8,
+    description:
+      'Compact 2-dham pilgrimage covering Badrinath and Kedarnath starting from Delhi with comfortable transfers and temple darshans.',
+    image: 'assets/images/2-dham-yatra-badrinath-kedarnath-from-delhi.jpg',
+    origin: 'Delhi',
+    dhamType: '2-dham',
+    slug: '2-dham-badrinath-kedarnath-delhi',
+    itinerary: [
+      'Day 1: Delhi to Haridwar — drive and overnight stay',
+      'Day 2: Haridwar to Guptkashi — local darshan en route',
+      'Day 3: Guptkashi to Kedarnath base / trek or pony to temple',
+      'Day 4: Kedarnath darshan and return to Guptkashi',
+      'Day 5: Drive towards Badrinath region and overnight',
+      'Day 6: Badrinath darshan and return to Haridwar/Delhi',
+    ],
+  },
+  {
+    title: '2 Dham Yatra (Badrinath & Kedarnath) — From Haridwar',
+    destination: 'Badrinath • Kedarnath',
+    duration: '6 Days / 5 Nights',
+    price: '₹19,499',
+    rating: 4.8,
+    description:
+      'Efficient 2-dham itinerary launching from Haridwar with emphasis on timely darshans and comfortable hill accommodation.',
+    image: 'assets/images/2-dham-yatra-badrinath-kedarnath-from-haridwar.jpg',
+    origin: 'Haridwar',
+    dhamType: '2-dham',
+    slug: '2-dham-badrinath-kedarnath-haridwar',
+    itinerary: [
+      'Day 1: Haridwar to Guptkashi — drive and check-in',
+      'Day 2: Guptkashi to Kedarnath (trek/pony) and darshan',
+      'Day 3: Kedarnath return to Guptkashi',
+      'Day 4: Drive to Badrinath region',
+      'Day 5: Badrinath darshan and return toward Haridhar',
+    ],
+  },
+  {
+    title: '1 Dham Yatra (Kedarnath) — From Delhi',
+    destination: 'Kedarnath',
     duration: '4 Days / 3 Nights',
-    price: '₹16,499',
+    price: '₹12,499',
     rating: 4.7,
-    description: 'Beachfront stays, water sports and curated sunset dinners.',
-    image:
-      'https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=900&q=80',
+    description:
+      'Short Kedarnath pilgrimage leaving from Delhi, includes transfers up to base and trek/ponny arrangements as needed.',
+    image: 'assets/images/1-dham-yatra-kedarnath-from-delhi.jpg',
+    origin: 'Delhi',
+    dhamType: '1-dham',
+    slug: '1-dham-kedarnath-delhi',
+    itinerary: [
+      'Day 1: Delhi to Rishikesh/Haridwar — overnight',
+      'Day 2: Drive to Sonprayag and trek/pony to Kedarnath',
+      'Day 3: Kedarnath darshan and return to Sonprayag',
+      'Day 4: Drive back to Delhi',
+    ],
   },
   {
-    title: 'Andaman Island Escape',
-    destination: 'Port Blair • Havelock',
+    title: '1 Dham Yatra (Kedarnath) — From Haridwar',
+    destination: 'Kedarnath',
+    duration: '3 Days / 2 Nights',
+    price: '₹11,299',
+    rating: 4.7,
+    description:
+      'Quick Kedarnath yatra from Haridwar with focus on comfort and timely darshan arrangements.',
+    image: 'assets/images/1-dham-yatra-kedarnath-from-delhi.jpg',
+    origin: 'Haridwar',
+    dhamType: '1-dham',
+    slug: '1-dham-kedarnath-haridwar',
+    itinerary: [
+      'Day 1: Haridwar to Sonprayag',
+      'Day 2: Trek/pony to Kedarnath and darshan',
+      'Day 3: Return to Haridhar',
+    ],
+  },
+  {
+    title: 'Shimla — Manali Holiday Package',
+    destination: 'Shimla • Manali',
     duration: '6 Days / 5 Nights',
-    price: '₹29,999',
-    rating: 4.9,
-    description: 'Pristine beaches, diving, and tranquil island hopping.',
-    image:
-      'https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=900&q=80',
-  },
-  {
-    title: 'Dubai City Lights',
-    destination: 'Dubai • Abu Dhabi',
-    duration: '5 Days / 4 Nights',
-    price: '₹44,999',
-    rating: 4.8,
-    description: 'Luxury skyline views, desert safaris and premium shopping.',
-    image:
-      'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=80',
-  },
-  {
-    title: 'Swiss Alpine Dream',
-    destination: 'Lucerne • Interlaken',
-    duration: '7 Days / 6 Nights',
-    price: '₹89,999',
-    rating: 5.0,
-    description: 'Lakeside luxury with mountain rail journeys and chalet stays.',
-    image:
-      'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=80',
-  },
-  {
-    title: 'Bali Island Romance',
-    destination: 'Ubud • Seminyak',
-    duration: '6 Days / 5 Nights',
-    price: '₹62,999',
-    rating: 4.9,
-    description: 'Tropical serenity with spa rituals and sunset beach time.',
-    image:
-      'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=900&q=80',
-  },
-  {
-    title: 'Sikkim Monsoon Trail',
-    destination: 'Gangtok • Lachung',
-    duration: '7 Days / 6 Nights',
-    price: '₹26,499',
-    rating: 4.8,
-    description: 'Cloud-kissed mountain valleys and local cultural experiences.',
-    image:
-      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80',
-  },
-  {
-    title: 'Meghalaya Rainforest Loop',
-    destination: 'Shillong • Cherrapunji',
-    duration: '5 Days / 4 Nights',
     price: '₹18,999',
     rating: 4.7,
-    description: 'Misty peaks, living root bridges and waterfall viewpoints.',
-    image:
-      'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=80',
+    description:
+      'Classic Himachal circuit covering colonial Shimla and alpine Manali with scenic drives and leisure time.',
+    image: 'assets/images/snowy-adventure.jpg',
+    slug: 'shimla-manali-package',
+    itinerary: [
+      'Day 1: Delhi to Shimla — overnight stay',
+      'Day 2: Shimla local sightseeing',
+      'Day 3: Drive to Manali via Kullu',
+      'Day 4: Manali local sightseeing and leisure',
+      'Day 5: Solang Valley / Rohtang (subject to permits)',
+    ],
   },
   {
-    title: 'Ooty Tea Garden Stay',
-    destination: 'Ooty • Coonoor',
+    title: 'Nainital & Kumaon Hill Escape',
+    destination: 'Nainital • Almora • Kausani',
     duration: '4 Days / 3 Nights',
+    price: '₹9,499',
+    rating: 4.6,
+    description: 'Peaceful Kumaon hill-station getaway with lakeside stays and scenic viewpoints.',
+    image: 'assets/images/nainital-kumaon-hill-escape.jpg',
+    slug: 'nainital-kumaon-escape',
+    itinerary: [
+      'Day 1: Delhi to Nainital — boating and market walk',
+      'Day 2: Nainital to Almora — cultural walk',
+      'Day 3: Kausani sunrise viewpoint and return',
+    ],
+  },
+  {
+    title: 'Goa Beach Break',
+    destination: 'North Goa • South Goa',
+    duration: '5 Days / 4 Nights',
     price: '₹14,999',
+    rating: 4.5,
+    description:
+      'Sun-drenched beaches, water-sports and relaxed coastal evenings with curated stays.',
+    image: 'assets/images/goa-beach-break.jpg',
+    slug: 'goa-beach-break',
+    itinerary: [
+      'Day 1: Arrival and beach time',
+      'Day 2: Water sports and North Goa sightseeing',
+      'Day 3: South Goa beaches and leisure',
+    ],
+  },
+  {
+    title: 'Kerala Backwaters & Houseboat',
+    destination: 'Alleppey • Kumarakom',
+    duration: '4 Days / 3 Nights',
+    price: '₹16,499',
     rating: 4.8,
-    description: 'Cool mountain air, botanical gardens and colonial charm.',
-    image:
-      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80',
+    description:
+      'Relaxing backwater cruise on a private houseboat with local cuisine and village visits.',
+    image: 'assets/images/kerala-backwaters-houseboat.jpg',
+    slug: 'kerala-backwaters-houseboat',
+    itinerary: [
+      'Day 1: Kochi arrival and transfer to Alleppey',
+      'Day 2: Houseboat cruise with village stopovers',
+      'Day 3: Kumarakom bird sanctuary and leisure',
+    ],
+  },
+  {
+    title: 'Ranthambore Tiger Safari',
+    destination: 'Ranthambore National Park',
+    duration: '3 Days / 2 Nights',
+    price: '₹12,999',
+    rating: 4.6,
+    description:
+      'Early morning and late afternoon safaris in search of tigers, with comfortable forest lodges.',
+    image: 'assets/images/ranthambore-tiger-safari.jpg',
+    slug: 'ranthambore-safari',
+    itinerary: [
+      'Day 1: Arrival and evening nature walk',
+      'Day 2: Morning & afternoon safaris',
+      'Day 3: Departure',
+    ],
+  },
+  {
+    title: 'Jaipur Heritage & Rajasthan Tour',
+    destination: 'Jaipur • Amber Fort • City Palace',
+    duration: '3 Days / 2 Nights',
+    price: '₹8,999',
+    rating: 4.5,
+    description: 'Explore royal forts, palaces and local markets with guided heritage walks.',
+    image: 'assets/images/jaipur-heritage-rajasthan-tour.jpg',
+    slug: 'jaipur-heritage-tour',
+    itinerary: ['Day 1: Arrival and Amber Fort visit', 'Day 2: City Palace and local bazaars'],
   },
 ];
 
@@ -239,38 +346,32 @@ export const packages: PackageItem[] = [
 export const gallery: GalleryItem[] = [
   {
     title: 'Scenic Mountain Drive',
-    image:
-      'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80',
+    image: 'assets/images/scenic-mountain-drive.jpg',
     category: 'Adventure',
   },
   {
     title: 'Beachfront Escape',
-    image:
-      'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80',
+    image: 'assets/images/beachfront-escape.jpg',
     category: 'Leisure',
   },
   {
     title: 'Royal Palace Stay',
-    image:
-      'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=900&q=80',
+    image: 'assets/images/royal-palace-stay.jpg',
     category: 'Culture',
   },
   {
     title: 'Houseboat Retreat',
-    image:
-      'https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=900&q=80',
+    image: 'assets/images/houseboat-retreat.jpg',
     category: 'Nature',
   },
   {
     title: 'Snowy Adventure',
-    image:
-      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80',
+    image: 'assets/images/snowy-adventure.jpg',
     category: 'Adventure',
   },
   {
     title: 'Desert Horizon',
-    image:
-      'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=80',
+    image: 'assets/images/desert-horizon.jpg',
     category: 'Desert',
   },
 ];
@@ -282,8 +383,7 @@ export const testimonials: TestimonialItem[] = [
     rating: 5,
     review:
       'Every detail felt premium and well planned. We loved the smooth transfers and thoughtful itinerary.',
-    image:
-      'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80',
+    image: 'assets/images/logo.jpeg',
   },
   {
     name: 'Naina Verma',
@@ -291,8 +391,7 @@ export const testimonials: TestimonialItem[] = [
     rating: 5,
     review:
       'The team made our honeymoon seamless. The stay, food and sightseeing were all unforgettable.',
-    image:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80',
+    image: 'assets/images/logo.jpeg',
   },
   {
     name: 'Rahul Desai',
@@ -300,8 +399,7 @@ export const testimonials: TestimonialItem[] = [
     rating: 5,
     review:
       'Professional, punctual and genuinely warm. KT Travels turned our family vacation into a beautiful memory.',
-    image:
-      'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80',
+    image: 'assets/images/logo.jpeg',
   },
 ];
 

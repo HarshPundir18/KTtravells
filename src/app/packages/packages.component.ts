@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { SeoService } from '../shared/seo.service';
-import { packages } from '../shared/travel-data';
+import { packages, PackageItem } from '../shared/travel-data';
 import { SectionHeadingComponent } from '../shared/section-heading/section-heading.component';
 
 @Component({
@@ -9,17 +9,20 @@ import { SectionHeadingComponent } from '../shared/section-heading/section-headi
   standalone: true,
   imports: [SectionHeadingComponent, RouterLink],
   templateUrl: './packages.component.html',
-  styleUrl: './packages.component.scss',
+  styleUrls: ['./packages.component.scss'],
 })
 export class PackagesComponent implements OnInit {
-  readonly packages = packages;
+  readonly packages: PackageItem[] = packages;
+  get displayPackages(): PackageItem[] {
+    return this.packages;
+  }
 
-  constructor(private readonly seo: SeoService) {}
+  private readonly seo = inject(SeoService);
 
   ngOnInit(): void {
     this.seo.setMeta(
-      'Tour Packages',
-      'Browse KT Travels package deals for premium India and international journeys.',
+      'Pilgrimage Packages',
+      'Browse KT Travels pilgrimage and Dham-focused packages.',
     );
   }
 }

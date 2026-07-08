@@ -16,10 +16,16 @@
           </div>
           <h3>{{ item.title }}</h3>
           <p class="location">{{ item.destination }}</p>
+          @if (item.origin) {
+            <p class="origin">Origin: {{ item.origin }}</p>
+          }
           <p>{{ item.description }}</p>
           <div class="package-footer">
             <strong>{{ item.price }}</strong>
-            <a routerLink="/contact">Book Now</a>
+            <div class="package-actions">
+              <a [routerLink]="['/packages', item.slug]">View Details</a>
+              <a routerLink="/contact" [queryParams]="{ package: item.title }">Book Now</a>
+            </div>
           </div>
         </div>
       </article>

@@ -26,6 +26,17 @@
   display: block;
 }
 
+.package-actions {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+.package-actions a {
+  text-decoration: none;
+  color: var(--secondary);
+  font-weight: 700;
+}
+
 .package-body {
   padding: 0.8rem 0.9rem 1rem;
 }

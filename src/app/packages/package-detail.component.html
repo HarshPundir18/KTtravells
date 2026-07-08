@@ -1,0 +1,34 @@
+@if (pkg) {
+  <section class="page-section package-detail">
+    <a routerLink="/packages" class="back">← All Packages</a>
+    <div class="detail-grid">
+      <img [src]="pkg.image" [alt]="pkg.title" />
+      <div class="detail-body">
+        <h1>{{ pkg.title }}</h1>
+        <p class="meta">{{ pkg.destination }} · {{ pkg.duration }}</p>
+        <p class="price">
+          Price: <strong>{{ pkg.price }}</strong>
+        </p>
+        <p>{{ pkg.description }}</p>
+        @if (pkg.itinerary) {
+          <div class="itinerary">
+            <h3>Sample Itinerary</h3>
+            <ol>
+              @for (day of pkg.itinerary; track day) {
+                <li>{{ day }}</li>
+              }
+            </ol>
+          </div>
+        }
+        <div class="actions">
+          <a routerLink="/contact" class="btn">Book Now</a>
+          <a routerLink="/contact" class="btn ghost">Enquire</a>
+        </div>
+      </div>
+    </div>
+  </section>
+} @else {
+  <section class="page-section">
+    <p>Package not found.</p>
+  </section>
+}
