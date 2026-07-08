@@ -1,0 +1,38 @@
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-copy">
+      <span class="eyebrow">Crafted journeys • trusted travel partner</span>
+      <h1>Explore India with KT Travels</h1>
+      <p>
+        Comfortable, Affordable & Memorable Journeys for families, couples and corporate groups.
+      </p>
+      <div class="hero-actions">
+        <a routerLink="/contact" class="btn btn-primary">Book Now</a>
+        <a routerLink="/packages" class="btn btn-secondary">View Packages</a>
+      </div>
+    </div>
+
+    <div class="search-card" aria-label="Search travel options">
+      <div class="search-heading">
+        <h3>Plan Your Trip</h3>
+        <p>Find your perfect escape in minutes.</p>
+      </div>
+      <div class="search-fields">
+        <label>
+          <span>Destination</span>
+          <input #dest type="text" placeholder="Kerala, Dubai, Goa" />
+        </label>
+        <label>
+          <span>Travel Date</span>
+          <input type="date" />
+        </label>
+        <label>
+          <span>Guests</span>
+          <input type="number" min="1" value="2" />
+        </label>
+        <button type="button" (click)="onSearch(dest.value)">Search</button>
+      </div>
+    </div>
+  </div>
+</section>

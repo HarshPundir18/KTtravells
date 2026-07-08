@@ -1,0 +1,21 @@
+<section class="page-section">
+  <app-section-heading
+    eyebrow="Testimonials"
+    title="Guests who loved every moment"
+    description="Our travelers keep returning for the thoughtful service, comfort and memorable experiences we create."
+  ></app-section-heading>
+
+  <div class="testimonial-grid">
+    @for (item of testimonials; track item.name) {
+      <article class="testimonial-card">
+        <img [src]="item.image" [alt]="item.name" loading="lazy" />
+        <div class="testimonial-body">
+          <div class="stars">★★★★★</div>
+          <p>“{{ item.review }}”</p>
+          <h3>{{ item.name }}</h3>
+          <span>{{ item.location }}</span>
+        </div>
+      </article>
+    }
+  </div>
+</section>

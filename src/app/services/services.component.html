@@ -1,0 +1,19 @@
+<section class="page-section">
+  <app-section-heading
+    eyebrow="Our Services"
+    title="Everything you need for a seamless journey"
+    description="From domestic getaways to international luxury stays, our services are built around comfort, precision and convenience."
+  ></app-section-heading>
+
+  <div class="services-grid">
+    @for (service of services; track service.title) {
+      <article class="service-card">
+        <div class="icon-wrap">
+          <i [class]="'fa-solid ' + service.icon"></i>
+        </div>
+        <h3>{{ service.title }}</h3>
+        <p>{{ service.description }}</p>
+      </article>
+    }
+  </div>
+</section>

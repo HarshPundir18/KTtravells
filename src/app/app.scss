@@ -1,0 +1,119 @@
+:host {
+  display: block;
+}
+
+.app-shell {
+  min-height: 100vh;
+  background: var(--background);
+}
+
+main {
+  display: block;
+}
+
+/* Booking modal */
+.booking-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.55);
+  display: grid;
+  place-items: center;
+  z-index: 9999;
+  padding: 1rem;
+}
+
+.booking-modal {
+  width: 100%;
+  max-width: 1000px;
+  background: var(--surface);
+  border-radius: 1.2rem;
+  padding: 1.4rem;
+  box-shadow: 0 16px 35px rgba(15, 76, 129, 0.08);
+  color: var(--text-dark);
+  position: relative;
+  max-height: calc(100vh - 4rem);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.booking-modal h3 {
+  margin: 0 0 0.5rem 0;
+}
+
+/* Reuse Contact page form styles inside modal */
+.booking-modal .form-card {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.booking-modal .form-card label {
+  display: grid;
+  gap: 0.35rem;
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.booking-modal .form-card input,
+.booking-modal .form-card textarea,
+.booking-modal .form-card button {
+  border: 1px solid rgba(15, 76, 129, 0.12);
+  border-radius: 0.9rem;
+  padding: 0.85rem 0.95rem;
+  font: inherit;
+}
+
+.booking-modal .form-card button {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.modal-actions {
+  margin-bottom: 0.75rem;
+}
+
+.book-now-btn {
+  min-height: var(--btn-height);
+  padding: var(--btn-padding);
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  border-radius: var(--btn-radius);
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: var(--btn-shadow);
+  width: 100%;
+}
+
+.close-btn {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 1.25rem;
+}
+
+.dont-show {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 480px) {
+  .booking-modal {
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  .modal-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .book-now-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

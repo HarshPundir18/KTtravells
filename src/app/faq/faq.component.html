@@ -1,0 +1,23 @@
+<section class="page-section faq-section">
+  <app-section-heading
+    eyebrow="FAQ"
+    title="Questions travelers often ask"
+    description="Everything you need to know before planning a trip with KT Travels."
+  ></app-section-heading>
+
+  <div class="faq-list">
+    @for (item of faqs; track item.question; let i = $index) {
+      <article class="faq-item">
+        <button type="button" class="faq-toggle" (click)="toggle(i)">
+          <span>{{ item.question }}</span>
+          <strong>{{ openIndex === i ? '−' : '+' }}</strong>
+        </button>
+        @if (openIndex === i) {
+          <div class="faq-answer">
+            <p>{{ item.answer }}</p>
+          </div>
+        }
+      </article>
+    }
+  </div>
+</section>

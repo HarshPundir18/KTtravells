@@ -1,0 +1,33 @@
+.not-found {
+  min-height: 80vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.not-found h1 {
+  font-size: 6rem;
+  margin: 0;
+  color: var(--primary);
+}
+
+.not-found h2 {
+  margin: 0.2rem 0 0.6rem;
+  color: var(--text-dark);
+}
+
+.not-found p {
+  color: var(--text-muted);
+  margin-bottom: 1.2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.9rem 1.2rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+}

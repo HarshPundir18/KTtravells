@@ -1,0 +1,19 @@
+<section class="page-section">
+  <app-section-heading
+    eyebrow="Gallery"
+    title="Moments that inspire the next trip"
+    description="A glimpse into the landscapes, stays and experiences we create across every itinerary."
+  ></app-section-heading>
+
+  <div class="gallery-grid">
+    @for (item of gallery; track item.title) {
+      <figure class="gallery-item">
+        <img [src]="item.image" [alt]="item.title" loading="lazy" />
+        <figcaption>
+          <span>{{ item.category }}</span>
+          <strong>{{ item.title }}</strong>
+        </figcaption>
+      </figure>
+    }
+  </div>
+</section>

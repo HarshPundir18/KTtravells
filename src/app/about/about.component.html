@@ -1,0 +1,45 @@
+<section class="page-section about-section">
+  <div class="section-intro">
+    <app-section-heading
+      eyebrow="About KT Travels"
+      title="Why travelers trust us for every destination"
+      description="We blend thoughtful planning, reliable transport and polished hospitality to make every trip feel effortless."
+    ></app-section-heading>
+  </div>
+
+  <div class="about-grid">
+    <div class="about-card">
+      <h3>Our Story</h3>
+      <p>
+        KT Travels was born from the idea that travel should feel premium without losing warmth,
+        clarity or affordability. We curate journeys that are deeply personal and beautifully
+        executed.
+      </p>
+      <p>
+        From weekend escapes to multi-city adventures, our concierge team ensures every transfer,
+        stay and itinerary detail is handled with care.
+      </p>
+    </div>
+    <div class="about-card mission-card">
+      <h3>Mission</h3>
+      <p>
+        To make travel stress-free, inspiring and accessible through thoughtful service and
+        transparent planning.
+      </p>
+      <h3>Vision</h3>
+      <p>
+        To become India’s most trusted travel partner for unforgettable journeys shaped around
+        comfort and value.
+      </p>
+    </div>
+  </div>
+
+  <div class="stats-grid">
+    @for (stat of stats; track stat.label) {
+      <article class="stat-card">
+        <strong>{{ stat.value }}</strong>
+        <span>{{ stat.label }}</span>
+      </article>
+    }
+  </div>
+</section>

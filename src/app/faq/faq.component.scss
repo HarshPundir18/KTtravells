@@ -1,0 +1,36 @@
+.faq-list {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.faq-item {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(15, 76, 129, 0.06);
+}
+
+.faq-toggle {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.1rem;
+  font: inherit;
+  color: var(--text-dark);
+  text-align: left;
+  cursor: pointer;
+}
+
+.faq-toggle strong {
+  color: var(--primary);
+  font-size: 1.15rem;
+}
+
+.faq-answer {
+  padding: 0 1.1rem 1rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
