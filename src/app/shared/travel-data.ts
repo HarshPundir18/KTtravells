@@ -27,6 +27,17 @@ export interface FleetItem {
   image: string;
 }
 
+export interface CabOption {
+  name: string;
+  type: string;
+  seats: string;
+  luggage: string;
+  bestFor: string;
+  tag: string;
+  icon: string;
+  image: string;
+}
+
 export interface GalleryItem {
   title: string;
   image: string;
@@ -113,6 +124,69 @@ export const services: ServiceItem[] = [
     title: 'Visa Assistance',
     description: 'Complete guidance for documentation, appointments and travel formalities.',
     icon: 'fa-passport',
+  },
+];
+
+export const cabOptions: CabOption[] = [
+  {
+    name: 'Swift Dzire',
+    type: 'Sedan',
+    seats: '4 seats',
+    luggage: '2 bags',
+    bestFor: 'Airport drops and short city rides',
+    tag: 'Economy',
+    icon: 'fa-taxi',
+    image: 'assets/images/swift-dzire.jpg',
+  },
+  {
+    name: 'Maruti Ertiga',
+    type: 'MUV',
+    seats: '6 seats',
+    luggage: '3 bags',
+    bestFor: 'Family trips and hill routes',
+    tag: 'Popular',
+    icon: 'fa-car-side',
+    image: 'assets/images/maruti-ertiga.jpg',
+  },
+  {
+    name: 'Innova Crysta',
+    type: 'Premium MUV',
+    seats: '6-7 seats',
+    luggage: '4 bags',
+    bestFor: 'Long tours and senior-friendly comfort',
+    tag: 'Comfort',
+    icon: 'fa-van-shuttle',
+    image: 'assets/images/innova-crysta.jpg',
+  },
+  {
+    name: 'Mahindra Scorpio',
+    type: 'SUV',
+    seats: '6-7 seats',
+    luggage: '3 bags',
+    bestFor: 'Mountain routes and group travel',
+    tag: 'SUV',
+    icon: 'fa-truck-pickup',
+    image: 'assets/images/mahindra-scorpio.jpg',
+  },
+  {
+    name: 'Mahindra Thar',
+    type: 'Lifestyle SUV',
+    seats: '4 seats',
+    luggage: '2 bags',
+    bestFor: 'Adventure drives and scenic getaways',
+    tag: 'Adventure',
+    icon: 'fa-compass',
+    image: 'assets/images/mahindra-thar.jpg',
+  },
+  {
+    name: 'Tempo Traveller',
+    type: 'Traveller',
+    seats: '12-17 seats',
+    luggage: 'Group luggage',
+    bestFor: 'Large families, yatras and corporate groups',
+    tag: 'Group',
+    icon: 'fa-bus-simple',
+    image: 'assets/images/tempo-traveller.jpg',
   },
 ];
 

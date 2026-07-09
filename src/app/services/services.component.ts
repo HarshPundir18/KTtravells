@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SeoService } from '../shared/seo.service';
-import { services } from '../shared/travel-data';
+import { cabOptions, services } from '../shared/travel-data';
 import { SectionHeadingComponent } from '../shared/section-heading/section-heading.component';
 
 @Component({
@@ -12,6 +12,7 @@ import { SectionHeadingComponent } from '../shared/section-heading/section-headi
 })
 export class ServicesComponent implements OnInit {
   readonly services = services;
+  readonly cabOptions = cabOptions;
 
   constructor(private readonly seo: SeoService) {}
 

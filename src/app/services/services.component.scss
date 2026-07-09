@@ -1,49 +1,197 @@
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.2rem;
+  gap: 1rem;
 }
 
 .service-card {
   background: white;
-  border-radius: 1.2rem;
-  padding: 1.4rem;
-  box-shadow: 0 12px 30px rgba(15, 76, 129, 0.08);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 1.35rem;
+  box-shadow: 0 12px 30px rgba(16, 42, 67, 0.07);
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
 }
 
 .service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 38px rgba(15, 76, 129, 0.14);
+  transform: translateY(-4px);
+  box-shadow: 0 18px 42px rgba(16, 42, 67, 0.11);
 }
 
 .icon-wrap {
   width: 3rem;
   height: 3rem;
-  border-radius: 0.9rem;
+  border-radius: 13px;
   display: grid;
   place-items: center;
-  background: linear-gradient(135deg, rgba(15, 76, 129, 0.12), rgba(0, 168, 168, 0.14));
+  background: #f5e7db;
   color: var(--primary);
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
+  font-size: 1.05rem;
+  margin-bottom: 0.85rem;
 }
 
 .service-card h3 {
-  margin-bottom: 0.45rem;
+  margin: 0 0 0.35rem;
   color: var(--text-dark);
+  font-size: 1rem;
 }
 
 .service-card p {
   margin: 0;
   color: var(--text-muted);
-  line-height: 1.7;
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+.cab-panel {
+  margin-top: 1.6rem;
+  display: grid;
+  grid-template-columns: minmax(230px, 0.6fr) minmax(0, 1.4fr);
+  gap: 1.4rem;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: linear-gradient(135deg, #fff 10%, #f4ede4 100%);
+  box-shadow: 0 22px 50px rgba(23, 36, 58, 0.1);
+}
+
+.cab-copy {
+  align-self: center;
+}
+
+.cab-copy span,
+.cab-tag {
+  color: var(--primary-dark);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.cab-copy h3 {
+  margin: 0.25rem 0 0.45rem;
+  font-size: clamp(1.6rem, 2.5vw, 2.25rem);
+  line-height: 1.15;
+}
+
+.cab-copy p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.cab-promise {
+  display: flex;
+  gap: 0.55rem;
+  align-items: flex-start;
+  margin-top: 1.25rem;
+  padding: 0.8rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.75);
+  color: var(--secondary);
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.cab-promise i { color: var(--primary); margin-top: 0.15rem; }
+
+.cab-options {
+  display: grid;
+  grid-column: 2;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.cab-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.86);
+  transition:
+    border-color 0.16s ease,
+    box-shadow 0.16s ease,
+    transform 0.16s ease,
+    background-color 0.16s ease;
+}
+
+.cab-card:hover,
+.cab-card:focus-within {
+  transform: translateY(-2px);
+  border-color: rgba(216, 93, 66, 0.65);
+  background: white;
+  box-shadow: 0 15px 28px rgba(216, 93, 66, 0.16);
+}
+
+.cab-card img {
+  display: block;
+  width: 100%;
+  height: 108px;
+  object-fit: cover;
+  filter: saturate(0.82) contrast(0.94);
+}
+
+.cab-icon {
+  position: absolute;
+  top: -1.4rem;
+  right: 0.85rem;
+  display: inline-grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 11px;
+  background: #f6e8dd;
+  color: var(--primary);
+  font-size: 0.95rem;
+}
+
+.cab-card-body { position: relative; display: grid; gap: 0.17rem; padding: 0.8rem; }
+
+.cab-card .cab-tag { padding-right: 2rem; }
+
+.cab-card strong {
+  padding-right: 1.4rem;
+  font-size: 0.98rem;
+  line-height: 1.25;
+}
+
+.cab-card small,
+.cab-meta,
+.cab-best {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+
+.cab-meta {
+  color: var(--secondary);
+  font-weight: 700;
+  display: flex;
+  gap: 0.35rem;
+  align-items: center;
+  margin-top: 0.45rem;
+}
+
+.cab-best {
+  align-self: end;
+  line-height: 1.45;
 }
 
 @media (max-width: 900px) {
   .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cab-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .cab-options { grid-column: 1; }
+
+  .cab-options {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -52,4 +200,9 @@
   .services-grid {
     grid-template-columns: 1fr;
   }
+
+  .cab-options {
+    grid-template-columns: 1fr;
+  }
+
 }

@@ -16,4 +16,34 @@
       </article>
     }
   </div>
+
+  <div class="cab-panel" id="cab-selection">
+    <div class="cab-copy">
+      <span>Cab selection</span>
+      <h3>Find a comfortable ride for every journey.</h3>
+      <p>
+        Explore our dependable cab options for city transfers, family tours, hill routes and group travel.
+      </p>
+      <div class="cab-promise">
+        <i class="fa-solid fa-shield-heart"></i>
+        <span>All cabs include a verified driver and on-trip support.</span>
+      </div>
+    </div>
+
+    <div class="cab-options" aria-label="Available cab options">
+      @for (cab of cabOptions; track cab.name) {
+        <article class="cab-card">
+          <img [src]="cab.image" [alt]="cab.name + ' cab option'" />
+          <div class="cab-card-body">
+            <span class="cab-tag">{{ cab.tag }}</span>
+            <span class="cab-icon"><i [class]="'fa-solid ' + cab.icon"></i></span>
+            <strong>{{ cab.name }}</strong>
+            <small>{{ cab.type }}</small>
+            <span class="cab-meta"><i class="fa-solid fa-users"></i>{{ cab.seats }}</span>
+            <span class="cab-best">{{ cab.bestFor }}</span>
+          </div>
+        </article>
+      }
+    </div>
+  </div>
 </section>
