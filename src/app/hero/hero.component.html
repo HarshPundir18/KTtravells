@@ -2,26 +2,27 @@
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="hero-copy">
-      <span class="eyebrow">Crafted journeys • trusted travel partner</span>
-      <h1>Explore India with KT Travels</h1>
+      <span class="eyebrow">Private tours across India</span>
+      <h1>Travel planning that feels calm, clear and personal.</h1>
       <p>
-        Comfortable, Affordable & Memorable Journeys for families, couples and corporate groups.
+        Handpicked stays, dependable transfers and thoughtful itineraries for pilgrimages,
+        holidays, family trips and group escapes.
       </p>
       <div class="hero-actions">
-        <a routerLink="/contact" class="btn btn-primary">Book Now</a>
-        <a routerLink="/packages" class="btn btn-secondary">View Packages</a>
+        <a routerLink="/contact" class="btn btn-primary">Start Planning</a>
+        <a routerLink="/packages" class="btn btn-secondary">Explore Packages</a>
       </div>
     </div>
 
     <div class="search-card" aria-label="Search travel options">
       <div class="search-heading">
-        <h3>Plan Your Trip</h3>
-        <p>Find your perfect escape in minutes.</p>
+        <span>Trip brief</span>
+        <h3>Where should we take you?</h3>
       </div>
       <div class="search-fields">
         <label>
           <span>Destination</span>
-          <input #dest type="text" placeholder="Kerala, Dubai, Goa" />
+          <input #dest type="text" placeholder="Kedarnath, Char Dham, Goa" />
         </label>
         <label>
           <span>Travel Date</span>
@@ -31,7 +32,19 @@
           <span>Guests</span>
           <input type="number" min="1" value="2" />
         </label>
-        <button type="button" (click)="onSearch(dest.value)">Search</button>
+        <label>
+          <span>Cab Type</span>
+          <select>
+            <option value="">Select cab</option>
+            <option>Swift Dzire</option>
+            <option>Maruti Ertiga</option>
+            <option>Innova Crysta</option>
+            <option>Mahindra Scorpio</option>
+            <option>Mahindra Thar</option>
+            <option>Tempo Traveller</option>
+          </select>
+        </label>
+        <button type="button" (click)="onSearch(dest.value)">Check Options</button>
       </div>
     </div>
   </div>

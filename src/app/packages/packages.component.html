@@ -1,8 +1,8 @@
 <section class="page-section">
   <app-section-heading
-    eyebrow="Featured Packages"
-    title="Curated stays, premium transfers and unforgettable moments"
-    description="Choose from more than 250 handpicked tour experiences designed around comfort and local insight."
+    eyebrow="Featured journeys"
+    title="Flexible packages built around how you travel"
+    description="Choose from pilgrimages, hill holidays, beach breaks and curated escapes with clear planning support."
   ></app-section-heading>
 
   <div class="packages-grid">
@@ -24,7 +24,7 @@
             <strong>{{ item.price }}</strong>
             <div class="package-actions">
               <a [routerLink]="['/packages', item.slug]">View Details</a>
-              <a routerLink="/contact" [queryParams]="{ package: item.title }">Book Now</a>
+              <a routerLink="/contact" [queryParams]="{ package: item.title }">Plan Trip</a>
             </div>
           </div>
         </div>

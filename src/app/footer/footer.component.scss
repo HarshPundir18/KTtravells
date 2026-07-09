@@ -1,7 +1,8 @@
 .site-footer {
-  background: #06233d;
+  background: #081320;
   color: white;
   padding: 3rem 2rem 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .footer-grid {
@@ -25,7 +26,7 @@
 .brand-mark {
   width: 2.8rem;
   height: 2.8rem;
-  border-radius: 0.75rem;
+  border-radius: 8px;
   object-fit: cover;
 }
 
@@ -36,8 +37,8 @@
 .brand-mark {
   display: grid;
   place-items: center;
-  background: linear-gradient(135deg, var(--accent), #ffcf4d);
-  color: #06233d;
+  background: var(--primary);
+  color: white;
   font-weight: 800;
 }
 
@@ -59,6 +60,10 @@
   text-decoration: none;
 }
 
+.footer-grid a:hover {
+  color: #9af1ef;
+}
+
 .newsletter {
   display: flex;
   gap: 0.6rem;
@@ -67,8 +72,8 @@
 
 .newsletter input {
   flex: 1;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 8px;
   background: rgba(255, 255, 255, 0.08);
   color: white;
   padding: 0.8rem 0.9rem;
@@ -76,12 +81,12 @@
 
 .newsletter button {
   border: none;
-  border-radius: 999px;
+  border-radius: 8px;
   min-height: var(--btn-height);
   padding: var(--btn-padding);
-  background: var(--accent);
-  color: #06233d;
-  font-weight: 700;
+  background: var(--primary);
+  color: white;
+  font-weight: 800;
   box-shadow: var(--btn-shadow);
 }
 
