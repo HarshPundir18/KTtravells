@@ -26,8 +26,7 @@
   min-height: 220px;
   border-radius: 0;
   background:
-    linear-gradient(135deg, rgba(213, 164, 77, 0.78), rgba(213, 164, 77, 0.13)),
-    var(--secondary);
+    linear-gradient(135deg, rgba(213, 164, 77, 0.78), rgba(213, 164, 77, 0.13)), var(--secondary);
   display: grid;
   place-items: center;
   color: var(--text-dark);
@@ -62,7 +61,7 @@
   padding: var(--btn-padding);
   border-radius: var(--btn-radius);
   background: var(--primary);
-  color: #141019;
+  color: white;
   border: 1px solid var(--primary);
   font-weight: 800;
   cursor: pointer;

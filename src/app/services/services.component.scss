@@ -1,24 +1,25 @@
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.8rem;
+  gap: 1rem;
 }
 
 .service-card {
-  background: var(--surface);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
   border: 1px solid var(--border);
-  border-radius: 0;
-  padding: 1.25rem;
-  box-shadow: none;
+  border-radius: 1.1rem;
+  padding: 1.3rem;
+  box-shadow: var(--card-shadow);
   transition:
     transform 0.25s ease,
-    box-shadow 0.25s ease;
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .service-card:hover {
   transform: translateY(-5px);
-  background: #1b1b2a;
-  box-shadow: var(--card-shadow);
+  border-color: var(--primary);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.22);
 }
 
 .icon-wrap {
@@ -27,7 +28,7 @@
   border-radius: 50%;
   display: grid;
   place-items: center;
-  background: rgba(213, 164, 77, 0.16);
+  background: rgba(47, 125, 189, 0.12);
   color: var(--accent);
   font-size: 0.9rem;
   margin-bottom: 0.85rem;
@@ -55,10 +56,9 @@
   gap: 1.4rem;
   padding: 1.5rem;
   border: 1px solid var(--border);
-  border-radius: 0;
-  background: linear-gradient(135deg, #171725, #0e0e16);
-  border-color: var(--text-dark);
-  box-shadow: 0 24px 50px rgba(21, 33, 58, 0.16);
+  border-radius: 1.2rem;
+  background: linear-gradient(135deg, rgba(47, 125, 189, 0.12), rgba(255, 255, 255, 0.95));
+  box-shadow: 0 24px 50px rgba(20, 49, 77, 0.08);
 }
 
 .cab-copy {
@@ -95,7 +95,7 @@
   align-items: flex-start;
   margin-top: 1.25rem;
   padding: 0.8rem;
-  border-radius: 0;
+  border-radius: 0.9rem;
   background: rgba(255, 255, 255, 0.12);
   color: white;
   font-size: 0.78rem;
@@ -103,7 +103,10 @@
   line-height: 1.5;
 }
 
-.cab-promise i { color: var(--primary); margin-top: 0.15rem; }
+.cab-promise i {
+  color: var(--primary);
+  margin-top: 0.15rem;
+}
 
 .cab-options {
   display: grid;
@@ -116,7 +119,7 @@
   position: relative;
   overflow: hidden;
   border: 1px solid var(--border);
-  border-radius: 0;
+  border-radius: 1rem;
   background: var(--surface);
   transition:
     border-color 0.16s ease,
@@ -129,7 +132,7 @@
 .cab-card:focus-within {
   transform: translateY(-2px);
   border-color: var(--primary);
-  background: #1b1b2a;
+  background: #16253a;
   box-shadow: 0 12px 28px rgba(21, 33, 58, 0.12);
 }
 
@@ -155,9 +158,16 @@
   font-size: 0.95rem;
 }
 
-.cab-card-body { position: relative; display: grid; gap: 0.17rem; padding: 0.8rem; }
+.cab-card-body {
+  position: relative;
+  display: grid;
+  gap: 0.17rem;
+  padding: 0.8rem;
+}
 
-.cab-card .cab-tag { padding-right: 2rem; }
+.cab-card .cab-tag {
+  padding-right: 2rem;
+}
 
 .cab-card strong {
   padding-right: 1.4rem;
@@ -195,9 +205,8 @@
     grid-template-columns: 1fr;
   }
 
-  .cab-options { grid-column: 1; }
-
   .cab-options {
+    grid-column: 1;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -210,5 +219,4 @@
   .cab-options {
     grid-template-columns: 1fr;
   }
-
 }

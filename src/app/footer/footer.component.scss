@@ -1,8 +1,8 @@
 .site-footer {
-  background: #06060a;
-  color: white;
-  padding: 3rem 2rem 1.5rem;
-  border-top: 1px solid var(--primary);
+  background: linear-gradient(180deg, #f4efe6 0%, #f7f4ee 100%);
+  color: var(--text-dark);
+  padding: 3rem 2rem 1.6rem;
+  border-top: 1px solid rgba(20, 49, 77, 0.08);
 }
 
 .footer-grid {
@@ -45,7 +45,7 @@
 .footer-grid p,
 .footer-grid li,
 .footer-bottom span {
-  color: rgba(255, 255, 255, 0.74);
+  color: var(--text-muted);
 }
 
 .footer-grid ul {
@@ -56,7 +56,7 @@
 }
 
 .footer-grid a {
-  color: white;
+  color: var(--text-dark);
   text-decoration: none;
 }
 
@@ -73,19 +73,19 @@
 .newsletter input {
   flex: 1;
   border: 1px solid rgba(255, 255, 255, 0.24);
-  border-radius: 0;
+  border-radius: 999px;
   background: rgba(255, 255, 255, 0.08);
   color: white;
-  padding: 0.8rem 0.9rem;
+  padding: 0.8rem 0.95rem;
 }
 
 .newsletter button {
   border: none;
-  border-radius: 0;
+  border-radius: 999px;
   min-height: var(--btn-height);
   padding: var(--btn-padding);
   background: var(--primary);
-  color: var(--text-dark);
+  color: white;
   font-weight: 800;
   box-shadow: var(--btn-shadow);
 }

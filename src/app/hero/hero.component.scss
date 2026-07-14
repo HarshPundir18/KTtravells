@@ -1,71 +1,170 @@
 .hero {
   position: relative;
-  min-height: 980px;
-  padding: 8.6rem 1.5rem 7rem;
+  min-height: 760px;
+  padding: 6.6rem 1.5rem 4.2rem;
   overflow: hidden;
   background:
-    linear-gradient(90deg, rgba(6, 8, 15, 0.7), rgba(6, 8, 15, 0.24) 65%, rgba(6, 8, 15, 0.48)),
+    linear-gradient(90deg, rgba(7, 18, 33, 0.78), rgba(7, 18, 33, 0.2) 60%, rgba(7, 18, 33, 0.48)),
     url('../../assets/images/royal-palace-stay.jpg') center/cover no-repeat;
+  background-size: cover;
 }
 
-.hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6, 8, 15, 0.2), rgba(6, 8, 15, 0.82) 78%, var(--background)); }
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(7, 17, 27, 0.16),
+    rgba(7, 17, 27, 0.76) 78%,
+    var(--background)
+  );
+}
 
-.hero-content { position: relative; z-index: 1; width: min(1015px, 100%); margin: 0 auto; }
+.hero-content {
+  position: relative;
+  z-index: 1;
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
 
-.hero-main { min-height: 475px; display: flex; align-items: center; justify-content: space-between; gap: 3rem; }
+.hero-main {
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
 
-.hero-copy { max-width: 510px; }
+.hero-copy {
+  max-width: 560px;
+}
 
-.eyebrow { color: var(--accent); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.27em; text-transform: uppercase; }
+.eyebrow {
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
 
-.hero-copy h1 { margin: 0.8rem 0 0.7rem; color: white; font-size: clamp(3.4rem, 5.1vw, 5.6rem); font-weight: 600; line-height: 0.92; }
+.hero-copy h1 {
+  margin: 0.8rem 0 0.75rem;
+  color: white;
+  font-size: clamp(3rem, 4.2vw, 4.6rem);
+  font-weight: 600;
+  line-height: 0.95;
+}
 
-.hero-copy p { color: rgba(255, 255, 255, 0.84); font-size: 1rem; line-height: 1.55; }
+.hero-copy p {
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 1rem;
+  line-height: 1.65;
+}
 
-.hero-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; }
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
 
-.btn { min-height: 46px; padding: 0.75rem 1.45rem; font-size: 0.73rem; font-weight: 800; }
-.btn-primary { background: linear-gradient(100deg, #e4bd78, #c68d27); color: #121018; }
-.btn-primary:hover { background: #f0ca85; }
-.btn-secondary { border: 1px solid rgba(255, 255, 255, 0.5); color: white; }
-.btn-secondary i { font-size: 0.65rem; }
+.btn {
+  min-height: 46px;
+  padding: 0.75rem 1.45rem;
+  font-size: 0.73rem;
+  font-weight: 800;
+}
 
-.hero-stats { width: 150px; display: grid; gap: 2.1rem; padding-left: 1.4rem; border-left: 1px solid rgba(255, 255, 255, 0.22); text-align: right; }
-.hero-stats div { display: grid; gap: 0.08rem; }
-.hero-stats strong { color: var(--accent); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2.2rem; font-weight: 600; line-height: 1; }
-.hero-stats span { color: rgba(255, 255, 255, 0.82); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.11em; text-transform: uppercase; }
+.btn-primary {
+  background: linear-gradient(100deg, #2f7dbd, #2a6da2);
+  color: white;
+  box-shadow: 0 10px 24px rgba(47, 125, 189, 0.2);
+}
 
-.flight-search { padding: 2rem 2.45rem 2.5rem; border: 1px solid rgba(227, 189, 120, 0.22); background: rgba(17, 17, 31, 0.96); box-shadow: 0 24px 55px rgba(0, 0, 0, 0.36); }
-.flight-search-heading { display: flex; align-items: center; gap: 0.85rem; }
-.flight-icon { display: grid; width: 42px; height: 42px; place-items: center; border-radius: 50%; background: var(--primary); color: var(--secondary); font-size: 1rem; }
-.flight-search h2 { margin: 0; color: white; font-size: 1.7rem; line-height: 1; }
-.flight-search-heading p { color: rgba(255, 255, 255, 0.62); font-size: 0.72rem; }
+.btn-primary:hover {
+  background: #3b8dc4;
+}
 
-.trip-type { display: flex; margin: 1.35rem 0 1.4rem; padding: 0.2rem; background: #252536; }
-.trip-type button, .cabin-type button { min-height: 33px; padding: 0.35rem 0.85rem; border: 1px solid transparent; color: rgba(255, 255, 255, 0.7); font-size: 0.68rem; text-transform: none; letter-spacing: 0; }
-.trip-type .selected, .cabin-type .selected { border-color: var(--primary); background: rgba(213, 164, 77, 0.16); color: var(--accent); }
+.btn-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: white;
+  background: rgba(255, 255, 255, 0.09);
+}
 
-.flight-fields { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0.7rem; }
-.flight-fields label { display: grid; gap: 0.35rem; }
-.flight-fields label > span { color: var(--accent); font-size: 0.59rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
-.flight-fields input, .flight-fields select { width: 100%; min-height: 47px; padding: 0.6rem; border-color: rgba(255, 255, 255, 0.16); background: #222232; color: white; font-size: 0.75rem; }
+.btn-secondary i {
+  font-size: 0.65rem;
+}
 
-.flight-footer { display: grid; gap: 1.25rem; margin-top: 1.5rem; }
-.cabin-type { display: flex; flex-wrap: wrap; gap: 0.55rem; }
-.cabin-type button { border-color: rgba(255, 255, 255, 0.22); }
-.search-flights { width: 100%; min-height: 46px; border: 0; background: linear-gradient(100deg, #e1b675, #c58a1b); color: #17121a; font-size: 0.75rem; font-weight: 800; }
-.search-flights i { font-size: 0.75rem; }
+.hero-stats {
+  width: 220px;
+  display: grid;
+  gap: 0.85rem;
+  padding: 1.1rem;
+  border: 1px solid rgba(20, 49, 77, 0.1);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 16px 36px rgba(20, 49, 77, 0.12);
+}
+
+.hero-stats div {
+  display: grid;
+  gap: 0.15rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.hero-stats div:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.hero-stats strong {
+  color: var(--accent);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.hero-stats span {
+  color: var(--text-muted);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
 
 @media (max-width: 900px) {
-  .hero { min-height: 1020px; padding: 7.5rem 1rem 4rem; }
-  .flight-fields { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hero {
+    min-height: 860px;
+    padding: 7rem 1rem 4rem;
+  }
+
+  .hero-main {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-stats {
+    width: 100%;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
 }
 
 @media (max-width: 640px) {
-  .hero { min-height: auto; padding: 6.5rem 1rem 3rem; }
-  .hero-main { min-height: 430px; align-items: flex-start; flex-direction: column; justify-content: center; }
-  .hero-stats { width: 100%; grid-template-columns: repeat(3, 1fr); gap: 0.7rem; padding: 1rem 0 0; border-left: 0; border-top: 1px solid rgba(255, 255, 255, 0.24); text-align: left; }
-  .hero-stats strong { font-size: 1.65rem; }
-  .flight-search { padding: 1.4rem 1rem; }
-  .flight-fields { grid-template-columns: 1fr; }
+  .hero {
+    min-height: auto;
+    padding: 6.4rem 1rem 3.2rem;
+  }
+
+  .hero-main {
+    min-height: 420px;
+    justify-content: center;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr;
+  }
 }

@@ -30,13 +30,14 @@
 }
 
 .mission-card {
-  background: linear-gradient(135deg, #1c1b2c, #0e0e16);
+  background: linear-gradient(135deg, #fff8ed, #ffffff);
   box-shadow: var(--card-shadow);
+  border-color: rgba(47, 125, 189, 0.16);
 }
 
 .mission-card h3,
 .mission-card p {
-  color: white;
+  color: var(--text-dark);
 }
 
 .stats-grid {

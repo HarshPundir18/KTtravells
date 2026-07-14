@@ -106,23 +106,23 @@
 
 .book-btn {
   padding: 0.7rem 1rem;
-  border-radius: 0;
+  border-radius: 999px;
   background: var(--primary);
-  color: #18121b;
+  color: white;
   border: 0;
   font-weight: 700;
   font-size: 0.65rem;
   letter-spacing: 0.07em;
   text-transform: uppercase;
   text-decoration: none;
-  box-shadow: none;
+  box-shadow: var(--btn-shadow);
 }
 
 .book-btn:hover {
   transform: translateY(-2px);
-  background: var(--accent);
-  color: #18121b;
-  box-shadow: none;
+  background: var(--primary-dark);
+  color: white;
+  box-shadow: var(--btn-shadow);
 }
 
 .topbar.hero-nav {
