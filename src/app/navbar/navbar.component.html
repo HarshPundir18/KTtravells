@@ -1,4 +1,4 @@
-<header class="topbar">
+<header class="topbar" [class.hero-nav]="isHome">
   <a class="brand" routerLink="/">
     <img
       class="brand-logo"
@@ -23,12 +23,14 @@
     @for (item of menuItems; track item.label) {
       <a
         [routerLink]="item.path"
+        [fragment]="item.fragment"
         routerLinkActive="active"
         [routerLinkActiveOptions]="{ exact: item.path === '/' }"
+        (click)="closeMenu()"
         >{{ item.label }}</a
       >
     }
   </nav>
 
-  <a class="book-btn" routerLink="/contact">Plan a Trip</a>
+  <a class="book-btn" routerLink="/contact">Book a Journey</a>
 </header>

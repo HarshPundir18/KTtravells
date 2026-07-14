@@ -3,7 +3,9 @@
   margin-bottom: 1rem;
   color: var(--primary-dark);
   text-decoration: none;
-  font-weight: 800;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  text-transform: none;
 }
 
 .detail-grid {
@@ -17,12 +19,15 @@
   height: 320px;
   object-fit: cover;
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: 0;
   box-shadow: var(--card-shadow);
+  filter: saturate(0.78) contrast(1.08) brightness(0.82);
 }
 
-.detail-body h1 {
+.detail-body h1,
+.itinerary h3 {
   margin: 0 0 0.25rem;
+  text-transform: none;
 }
 
 .meta {
@@ -31,7 +36,7 @@
 }
 
 .price strong {
-  color: var(--secondary);
+  color: var(--accent);
 }
 
 .itinerary ol {
@@ -43,19 +48,21 @@
   display: flex;
   gap: 0.6rem;
 }
+
 .btn {
   padding: 0.6rem 1rem;
   background: var(--primary);
-  color: white;
-  border-radius: 8px;
+  color: #141019;
+  border-radius: 0;
   text-decoration: none;
   font-weight: 800;
   box-shadow: var(--btn-shadow);
 }
+
 .btn.ghost {
   background: transparent;
   border: 1px solid var(--primary);
-  color: var(--primary-dark);
+  color: var(--accent);
   box-shadow: none;
 }
 

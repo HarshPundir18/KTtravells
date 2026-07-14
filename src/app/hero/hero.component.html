@@ -1,50 +1,42 @@
 <section class="hero">
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div class="hero-copy">
-      <span class="eyebrow">Private tours across India</span>
-      <h1>Travel planning that feels calm, clear and personal.</h1>
-      <p>
-        Handpicked stays, dependable transfers and thoughtful itineraries for pilgrimages,
-        holidays, family trips and group escapes.
-      </p>
-      <div class="hero-actions">
-        <a routerLink="/contact" class="btn btn-primary">Start Planning</a>
-        <a routerLink="/packages" class="btn btn-secondary">Explore Packages</a>
+    <div class="hero-main">
+      <div class="hero-copy">
+        <span class="eyebrow">India</span>
+        <h1>Timeless Elegance</h1>
+        <p>Immerse yourself in extraordinary places with curated luxury experiences and five-star accommodations.</p>
+        <div class="hero-actions">
+          <a routerLink="/packages" class="btn btn-primary">Discover India</a>
+          <a routerLink="/gallery" class="btn btn-secondary"><i class="fa-solid fa-play"></i> Watch story</a>
+        </div>
       </div>
+
+      <aside class="hero-stats" aria-label="KT Travels highlights">
+        <div><strong>500+</strong><span>Destinations</span></div>
+        <div><strong>50K+</strong><span>Happy travelers</span></div>
+        <div><strong>15+</strong><span>Years experience</span></div>
+      </aside>
     </div>
 
-    <div class="search-card" aria-label="Search travel options">
-      <div class="search-heading">
-        <span>Trip brief</span>
-        <h3>Where should we take you?</h3>
+    <div class="flight-search" aria-label="Find your flight">
+      <div class="flight-search-heading">
+        <span class="flight-icon"><i class="fa-solid fa-plane"></i></span>
+        <div><h2>Find Your Flight</h2><p>Search from 500+ airlines worldwide</p></div>
       </div>
-      <div class="search-fields">
-        <label>
-          <span>Destination</span>
-          <input #dest type="text" placeholder="Kedarnath, Char Dham, Goa" />
-        </label>
-        <label>
-          <span>Travel Date</span>
-          <input type="date" />
-        </label>
-        <label>
-          <span>Guests</span>
-          <input type="number" min="1" value="2" />
-        </label>
-        <label>
-          <span>Cab Type</span>
-          <select>
-            <option value="">Select cab</option>
-            <option>Swift Dzire</option>
-            <option>Maruti Ertiga</option>
-            <option>Innova Crysta</option>
-            <option>Mahindra Scorpio</option>
-            <option>Mahindra Thar</option>
-            <option>Tempo Traveller</option>
-          </select>
-        </label>
-        <button type="button" (click)="onSearch(dest.value)">Check Options</button>
+      <div class="trip-type" aria-label="Trip type">
+        <button type="button" class="selected">Round trip</button><button type="button">One way</button><button type="button">Multi-city</button>
+      </div>
+      <div class="flight-fields">
+        <label><span>From</span><input #origin type="text" value="New Delhi (DEL)" /></label>
+        <label><span>To</span><input #destination type="text" value="Paris (CDG)" /></label>
+        <label><span>Departure</span><input type="date" /></label>
+        <label><span>Return</span><input type="date" /></label>
+        <label><span>Passengers</span><select><option>1 Passenger</option><option>2 Passengers</option><option>Family / group</option></select></label>
+      </div>
+      <div class="flight-footer">
+        <div class="cabin-type"><button type="button">Economy</button><button type="button">Premium</button><button type="button" class="selected">Business</button><button type="button">First class</button></div>
+        <button type="button" class="search-flights" (click)="onSearch(destination.value)"><i class="fa-solid fa-magnifying-glass"></i> Search flights</button>
       </div>
     </div>
   </div>

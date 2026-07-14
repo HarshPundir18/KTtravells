@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { SeoService } from '../shared/seo.service';
 
@@ -10,7 +10,7 @@ import { SeoService } from '../shared/seo.service';
   styleUrl: './not-found.component.scss',
 })
 export class NotFoundComponent implements OnInit {
-  constructor(private readonly seo: SeoService) {}
+  private readonly seo = inject(SeoService);
 
   ngOnInit(): void {
     this.seo.setMeta('404', 'The page you requested could not be found.');

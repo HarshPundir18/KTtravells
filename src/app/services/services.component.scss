@@ -1,41 +1,44 @@
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
+  gap: 0.8rem;
 }
 
 .service-card {
-  background: white;
+  background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 18px;
-  padding: 1.35rem;
-  box-shadow: 0 12px 30px rgba(16, 42, 67, 0.07);
+  border-radius: 0;
+  padding: 1.25rem;
+  box-shadow: none;
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
 }
 
 .service-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 42px rgba(16, 42, 67, 0.11);
+  transform: translateY(-5px);
+  background: #1b1b2a;
+  box-shadow: var(--card-shadow);
 }
 
 .icon-wrap {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 13px;
+  width: 2.45rem;
+  height: 2.45rem;
+  border-radius: 50%;
   display: grid;
   place-items: center;
-  background: #f5e7db;
-  color: var(--primary);
-  font-size: 1.05rem;
+  background: rgba(213, 164, 77, 0.16);
+  color: var(--accent);
+  font-size: 0.9rem;
   margin-bottom: 0.85rem;
 }
 
 .service-card h3 {
   margin: 0 0 0.35rem;
   color: var(--text-dark);
-  font-size: 1rem;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
 }
 
 .service-card p {
@@ -52,33 +55,36 @@
   gap: 1.4rem;
   padding: 1.5rem;
   border: 1px solid var(--border);
-  border-radius: 24px;
-  background: linear-gradient(135deg, #fff 10%, #f4ede4 100%);
-  box-shadow: 0 22px 50px rgba(23, 36, 58, 0.1);
+  border-radius: 0;
+  background: linear-gradient(135deg, #171725, #0e0e16);
+  border-color: var(--text-dark);
+  box-shadow: 0 24px 50px rgba(21, 33, 58, 0.16);
 }
 
 .cab-copy {
   align-self: center;
 }
 
-.cab-copy span,
+.cab-copy > span,
 .cab-tag {
-  color: var(--primary-dark);
+  color: var(--accent);
   font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.12em;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .cab-copy h3 {
   margin: 0.25rem 0 0.45rem;
   font-size: clamp(1.6rem, 2.5vw, 2.25rem);
   line-height: 1.15;
+  color: white;
+  text-transform: none;
 }
 
 .cab-copy p {
   margin: 0;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.68);
   font-size: 0.9rem;
   line-height: 1.65;
 }
@@ -89,9 +95,9 @@
   align-items: flex-start;
   margin-top: 1.25rem;
   padding: 0.8rem;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.75);
-  color: var(--secondary);
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
   font-size: 0.78rem;
   font-weight: 700;
   line-height: 1.5;
@@ -110,8 +116,8 @@
   position: relative;
   overflow: hidden;
   border: 1px solid var(--border);
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.86);
+  border-radius: 0;
+  background: var(--surface);
   transition:
     border-color 0.16s ease,
     box-shadow 0.16s ease,
@@ -122,9 +128,9 @@
 .cab-card:hover,
 .cab-card:focus-within {
   transform: translateY(-2px);
-  border-color: rgba(216, 93, 66, 0.65);
-  background: white;
-  box-shadow: 0 15px 28px rgba(216, 93, 66, 0.16);
+  border-color: var(--primary);
+  background: #1b1b2a;
+  box-shadow: 0 12px 28px rgba(21, 33, 58, 0.12);
 }
 
 .cab-card img {
@@ -143,9 +149,9 @@
   place-items: center;
   width: 2.25rem;
   height: 2.25rem;
-  border-radius: 11px;
-  background: #f6e8dd;
-  color: var(--primary);
+  border-radius: 50%;
+  background: var(--primary);
+  color: var(--secondary);
   font-size: 0.95rem;
 }
 
@@ -167,7 +173,7 @@
 }
 
 .cab-meta {
-  color: var(--secondary);
+  color: var(--text-dark);
   font-weight: 700;
   display: flex;
   gap: 0.35rem;

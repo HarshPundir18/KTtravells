@@ -15,7 +15,7 @@ main {
 .booking-modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(8, 19, 32, 0.64);
+  background: rgba(0, 0, 0, 0.8);
   display: grid;
   place-items: center;
   z-index: 9999;
@@ -27,9 +27,9 @@ main {
   max-width: 860px;
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 22px;
+  border-radius: 0;
   padding: 1.5rem;
-  box-shadow: 0 24px 60px rgba(8, 19, 32, 0.28);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.48);
   color: var(--text-dark);
   position: relative;
   max-height: calc(100vh - 4rem);
@@ -39,7 +39,8 @@ main {
 
 .booking-modal h3 {
   margin: 0 0 0.5rem 0;
-  font-size: 1.7rem;
+  font-size: 1.9rem;
+  font-family: 'Cormorant Garamond', Georgia, serif;
 }
 
 /* Reuse Contact page form styles inside modal */
@@ -60,7 +61,7 @@ main {
 .booking-modal .form-card textarea,
 .booking-modal .form-card button {
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: 0;
   padding: 0.68rem 0.78rem;
   font: inherit;
   font-size: 0.9rem;
@@ -68,8 +69,8 @@ main {
 
 .booking-modal .form-card button {
   background: var(--primary);
-  color: white;
-  border: none;
+  color: #141019;
+  border: 1px solid var(--primary);
   font-weight: 800;
   cursor: pointer;
 }
@@ -82,7 +83,7 @@ main {
   min-height: var(--btn-height);
   padding: var(--btn-padding);
   background: var(--primary);
-  color: white;
+  color: #141019;
   border-radius: var(--btn-radius);
   text-decoration: none;
   font-weight: 800;
@@ -94,7 +95,7 @@ main {
   position: absolute;
   right: 1rem;
   top: 1rem;
-  background: #f5e9df;
+  background: var(--primary);
   border: 1px solid var(--border);
   border-radius: 50%;
   font-size: 1.25rem;
@@ -111,7 +112,7 @@ main {
 @media (max-width: 480px) {
   .booking-modal {
     padding: 1rem;
-    border-radius: 8px;
+    border-radius: 0;
   }
   .modal-actions {
     flex-direction: column;

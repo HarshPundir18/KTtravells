@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { SeoService } from '../shared/seo.service';
 import { SectionHeadingComponent } from '../shared/section-heading/section-heading.component';
 
@@ -10,7 +10,7 @@ import { SectionHeadingComponent } from '../shared/section-heading/section-headi
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent implements OnInit {
-  constructor(private readonly seo: SeoService) {}
+  private readonly seo = inject(SeoService);
 
   ngOnInit(): void {
     this.seo.setMeta(

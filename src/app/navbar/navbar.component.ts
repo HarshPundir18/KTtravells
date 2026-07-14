@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -9,13 +9,15 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
-  readonly menuItems = [
+  private readonly router = inject(Router);
+
+  readonly menuItems: { label: string; path: string; fragment?: string }[] = [
     { label: 'Home', path: '/' },
     { label: 'About', path: '/about' },
     { label: 'Packages', path: '/packages' },
-    // Fleet removed: not offering cab selection
-    { label: 'Gallery', path: '/gallery' },
     { label: 'Services', path: '/services' },
+    { label: 'Cabs', path: '/services', fragment: 'cab-selection' },
+    { label: 'Gallery', path: '/gallery' },
     { label: 'Contact', path: '/contact' },
   ];
 
@@ -27,5 +29,9 @@ export class NavbarComponent {
 
   closeMenu(): void {
     this.isMenuOpen = false;
+  }
+
+  get isHome(): boolean {
+    return this.router.url === '/';
   }
 }

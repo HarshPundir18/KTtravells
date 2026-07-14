@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { RouterOutlet, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -12,10 +12,10 @@ import { FooterComponent } from './footer/footer.component';
   styleUrl: './app.scss',
 })
 export class App implements OnInit {
+  private readonly router = inject(Router);
+
   isBookingModalVisible = false;
   hideBookingModalPermanently = false;
-
-  constructor(private readonly router: Router) {}
 
   ngOnInit(): void {
     const hidden = localStorage.getItem('kt_hideBookingModal');

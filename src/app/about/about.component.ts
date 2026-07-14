@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { SeoService } from '../shared/seo.service';
 import { stats } from '../shared/travel-data';
 import { SectionHeadingComponent } from '../shared/section-heading/section-heading.component';
@@ -11,9 +11,9 @@ import { SectionHeadingComponent } from '../shared/section-heading/section-headi
   styleUrl: './about.component.scss',
 })
 export class AboutComponent implements OnInit {
-  readonly stats = stats;
+  private readonly seo = inject(SeoService);
 
-  constructor(private readonly seo: SeoService) {}
+  readonly stats = stats;
 
   ngOnInit(): void {
     this.seo.setMeta(

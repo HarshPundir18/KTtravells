@@ -1,8 +1,8 @@
 .site-footer {
-  background: #081320;
+  background: #06060a;
   color: white;
   padding: 3rem 2rem 1.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid var(--primary);
 }
 
 .footer-grid {
@@ -26,7 +26,7 @@
 .brand-mark {
   width: 2.8rem;
   height: 2.8rem;
-  border-radius: 8px;
+  border-radius: 50%;
   object-fit: cover;
 }
 
@@ -61,7 +61,7 @@
 }
 
 .footer-grid a:hover {
-  color: #9af1ef;
+  color: var(--primary);
 }
 
 .newsletter {
@@ -73,7 +73,7 @@
 .newsletter input {
   flex: 1;
   border: 1px solid rgba(255, 255, 255, 0.24);
-  border-radius: 8px;
+  border-radius: 0;
   background: rgba(255, 255, 255, 0.08);
   color: white;
   padding: 0.8rem 0.9rem;
@@ -81,11 +81,11 @@
 
 .newsletter button {
   border: none;
-  border-radius: 8px;
+  border-radius: 0;
   min-height: var(--btn-height);
   padding: var(--btn-padding);
   background: var(--primary);
-  color: white;
+  color: var(--text-dark);
   font-weight: 800;
   box-shadow: var(--btn-shadow);
 }

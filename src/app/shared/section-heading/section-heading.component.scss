@@ -1,8 +1,8 @@
 .section-heading {
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
-  margin-bottom: 1.25rem;
+  gap: 0.55rem;
+  margin-bottom: 2.1rem;
 }
 
 .section-heading.centered {
@@ -15,31 +15,30 @@
   align-items: center;
   gap: 0.4rem;
   width: fit-content;
-  font-size: 0.8rem;
+  font-size: 0.65rem;
   font-weight: 800;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--primary-dark);
+  color: var(--accent);
 }
 
 .eyebrow::before {
   content: '';
   width: 2rem;
-  height: 2px;
-  background: var(--accent);
+  height: 1px;
+  background: var(--primary);
 }
 
 h2 {
   margin: 0;
-  font-size: clamp(1.45rem, 2.2vw, 2.25rem);
-  color: var(--text-dark);
-  line-height: 1.1;
+  font-size: clamp(2.6rem, 4vw, 4.2rem);
+  line-height: 0.96;
 }
 
 p {
   margin: 0;
   max-width: 700px;
   color: var(--text-muted);
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   line-height: 1.62;
 }

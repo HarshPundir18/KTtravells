@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { SeoService } from '../shared/seo.service';
 import { faqs } from '../shared/travel-data';
 import { SectionHeadingComponent } from '../shared/section-heading/section-heading.component';
@@ -11,10 +11,10 @@ import { SectionHeadingComponent } from '../shared/section-heading/section-headi
   styleUrl: './faq.component.scss',
 })
 export class FaqComponent implements OnInit {
+  private readonly seo = inject(SeoService);
+
   readonly faqs = faqs;
   openIndex = 0;
-
-  constructor(private readonly seo: SeoService) {}
 
   ngOnInit(): void {
     this.seo.setMeta('FAQ', 'Find quick answers to common travel and booking questions.');

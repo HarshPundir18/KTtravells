@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { HeroComponent } from '../hero/hero.component';
 import { AboutComponent } from '../about/about.component';
 import { ServicesComponent } from '../services/services.component';
@@ -26,7 +26,7 @@ import { SeoService } from '../shared/seo.service';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent implements OnInit {
-  constructor(private readonly seo: SeoService) {}
+  private readonly seo = inject(SeoService);
 
   ngOnInit(): void {
     this.seo.setMeta(
