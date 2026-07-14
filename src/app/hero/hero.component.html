@@ -5,10 +5,15 @@
       <div class="hero-copy">
         <span class="eyebrow">India</span>
         <h1>Timeless Elegance</h1>
-        <p>Immerse yourself in extraordinary places with curated luxury experiences and five-star accommodations.</p>
+        <p>
+          Immerse yourself in extraordinary places with curated luxury experiences and five-star
+          accommodations.
+        </p>
         <div class="hero-actions">
           <a routerLink="/packages" class="btn btn-primary">Discover India</a>
-          <a routerLink="/gallery" class="btn btn-secondary"><i class="fa-solid fa-play"></i> Watch story</a>
+          <a routerLink="/gallery" class="btn btn-secondary"
+            ><i class="fa-solid fa-play"></i> Watch story</a
+          >
         </div>
       </div>
 
@@ -17,27 +22,6 @@
         <div><strong>50K+</strong><span>Happy travelers</span></div>
         <div><strong>15+</strong><span>Years experience</span></div>
       </aside>
-    </div>
-
-    <div class="flight-search" aria-label="Find your flight">
-      <div class="flight-search-heading">
-        <span class="flight-icon"><i class="fa-solid fa-plane"></i></span>
-        <div><h2>Find Your Flight</h2><p>Search from 500+ airlines worldwide</p></div>
-      </div>
-      <div class="trip-type" aria-label="Trip type">
-        <button type="button" class="selected">Round trip</button><button type="button">One way</button><button type="button">Multi-city</button>
-      </div>
-      <div class="flight-fields">
-        <label><span>From</span><input #origin type="text" value="New Delhi (DEL)" /></label>
-        <label><span>To</span><input #destination type="text" value="Paris (CDG)" /></label>
-        <label><span>Departure</span><input type="date" /></label>
-        <label><span>Return</span><input type="date" /></label>
-        <label><span>Passengers</span><select><option>1 Passenger</option><option>2 Passengers</option><option>Family / group</option></select></label>
-      </div>
-      <div class="flight-footer">
-        <div class="cabin-type"><button type="button">Economy</button><button type="button">Premium</button><button type="button" class="selected">Business</button><button type="button">First class</button></div>
-        <button type="button" class="search-flights" (click)="onSearch(destination.value)"><i class="fa-solid fa-magnifying-glass"></i> Search flights</button>
-      </div>
     </div>
   </div>
 </section>
