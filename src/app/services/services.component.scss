@@ -78,13 +78,13 @@
   margin: 0.25rem 0 0.45rem;
   font-size: clamp(1.6rem, 2.5vw, 2.25rem);
   line-height: 1.15;
-  color: white;
+  color: #17263a;
   text-transform: none;
 }
 
 .cab-copy p {
   margin: 0;
-  color: rgba(255, 255, 255, 0.68);
+  color: #334a63;
   font-size: 0.9rem;
   line-height: 1.65;
 }
@@ -96,11 +96,12 @@
   margin-top: 1.25rem;
   padding: 0.8rem;
   border-radius: 0.9rem;
-  background: rgba(255, 255, 255, 0.12);
-  color: white;
+  background: rgba(255, 255, 255, 0.92);
+  color: #17263a;
   font-size: 0.78rem;
   font-weight: 700;
   line-height: 1.5;
+  box-shadow: 0 8px 20px rgba(13, 32, 48, 0.08);
 }
 
 .cab-promise i {
@@ -132,8 +133,25 @@
 .cab-card:focus-within {
   transform: translateY(-2px);
   border-color: var(--primary);
-  background: #16253a;
-  box-shadow: 0 12px 28px rgba(21, 33, 58, 0.12);
+  background: linear-gradient(135deg, #16395b 0%, #215d93 100%);
+  box-shadow: 0 12px 28px rgba(21, 33, 58, 0.16);
+}
+
+.cab-card:hover .cab-tag,
+.cab-card:hover strong,
+.cab-card:hover small,
+.cab-card:hover .cab-meta,
+.cab-card:hover .cab-best {
+  color: white;
+}
+
+.cab-card:hover .cab-meta {
+  color: rgba(255, 255, 255, 0.94);
+}
+
+.cab-card:hover .cab-icon {
+  background: white;
+  color: var(--primary);
 }
 
 .cab-card img {
